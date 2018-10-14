@@ -198,7 +198,7 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+      <script src="javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="index" data-languages="[&quot;shell&quot;]">
@@ -213,10 +213,6 @@
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
@@ -254,7 +250,7 @@
 <p><code>GET https://stasis.net/exchange/api/v3/info</code></p>
 
 <blockquote>
-<p>Example output</p>
+<p>Example response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"rates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -305,7 +301,17 @@
 </tbody></table>
 <h2 id='request-an-exchange'>Request an exchange</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example request:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"pair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH:EURS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refundAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x2cd18f83379b72Ba56dAb715DcF68C02E9CC10b0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"targetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x805bdd463705945018d8d8c3337d466096482136"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Example response:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"destinationAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16"</span><span class="p">,</span><span class="w">
